@@ -1,0 +1,12 @@
+<?php
+// Start the session
+session_start();
+
+session_unset();
+// конец сессии
+if (session_destroy()) {
+    // redirect to the login page
+    header("Location: index.php");
+    exit;
+}
+?>
